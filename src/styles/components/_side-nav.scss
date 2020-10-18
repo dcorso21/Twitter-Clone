@@ -1,0 +1,25 @@
+@use '../standard' as std;
+
+
+.side-bar{
+    grid-column: 1;
+
+    ul{
+        margin-left: 33%;
+        list-style: none;
+
+        li{
+            font-size: 125%;
+            font-weight: bold;
+            color: white;
+            padding: 15px;
+        }
+    }
+
+    .user-info {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        @include std.mx-flex-center;
+    }
+}
