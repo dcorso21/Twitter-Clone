@@ -6,11 +6,11 @@
     "scripts": {
         "ts-watch": "tsc -w",
         "sass-watch": "sass --no-source-map --watch src:dist",
+        "pug-watch": "pug -w ./src/pug/final -o ./dist/ -P",
         "dev": "nodemon dist/index.js",
         "start": "node dist/index.js",
         "start2": "ts-node src/index.ts",
         "dev2": "nodemon ts-node src/index.ts",
-        "create:migration": "mikro-orm migration:create"
     },
     "keywords": [],
     "author": "",
