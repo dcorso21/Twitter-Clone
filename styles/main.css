@@ -5,16 +5,16 @@
 }
 
 body {
-  color: white;
+  color: #fff;
+  background-color: #16212b;
   font-family: Helvetica, Arial, sans-serif;
 }
 
 .layout {
   display: grid;
+  grid-template-columns: 25% 42% 33%;
   height: 100vh;
   width: 100vw;
-  grid-template-columns: 3;
-  background-color: #16212b;
 }
 
 .side-bar {
@@ -26,7 +26,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 30vw;
-  margin-left: 10%;
+  margin-left: 25%;
 }
 .side-bar ul {
   list-style: none;
@@ -45,13 +45,15 @@ body {
   background-color: #172d3f;
   color: #1da1f2;
 }
+.side-bar ul li i {
+  font-size: 110%;
+}
 .side-bar ul li span {
   margin-left: 10px;
 }
 .side-bar ul .tweet-btn {
   background-color: #1da1f2;
   text-align: center;
-  width: 100%;
 }
 .side-bar ul .tweet-btn:hover {
   background-color: #1da0f2c5;
@@ -63,7 +65,6 @@ body {
   align-items: center;
   cursor: pointer;
   border-radius: 70px;
-  width: 100%;
   margin: 20px auto;
   padding: 10px;
   justify-content: space-between;
@@ -76,13 +77,13 @@ body {
 }
 .side-bar .user-info .info-left .fa-user {
   margin-right: 10px;
+  color: #657787;
   background-color: #cdd6dd;
   padding: 5px;
   padding-bottom: 0px;
+  border-radius: 50%;
   overflow: hidden;
   font-size: 200%;
-  color: #657787;
-  border-radius: 50%;
 }
 .side-bar .user-info .info-left .handle {
   color: grey;
@@ -94,6 +95,65 @@ body {
 
 .main-col {
   grid-column: 2;
+  border-left: 1px solid #253341;
+  border-right: 1px solid #253341;
+}
+.main-col .latest-tweets-header {
+  border-bottom: 1px solid #253341;
+  padding: 15px;
+  font-size: 110%;
+}
+.main-col .status {
+  padding: 10px;
+  padding-left: 15px;
+  border-bottom: 10px solid #253341;
+}
+.main-col .status .type-in {
+  display: flex;
+  padding-bottom: 10px;
+}
+.main-col .status .type-in .fa-user {
+  margin-right: 10px;
+  color: #657787;
+  background-color: #cdd6dd;
+  padding: 5px;
+  padding-bottom: 0px;
+  border-radius: 50%;
+  overflow: hidden;
+  font-size: 270%;
+}
+.main-col .status .type-in input {
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: #16212b;
+  font-size: 1.2rem;
+}
+.main-col .status .type-in input::placeholder {
+  color: #8899a6;
+}
+.main-col .status .lower-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-col .status .lower-btns .icons {
+  font-size: 130%;
+  color: #1da1f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+}
+.main-col .status .lower-btns .icons i {
+  margin-left: 17px;
+}
+.main-col .status .lower-btns .send-tweet {
+  background-color: #1da0f273;
+  color: #ffffff6e;
+  padding: 10px 15px;
+  border-radius: 70px;
+  font-weight: bold;
 }
 
 .profiles {
