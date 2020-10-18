@@ -1,18 +1,101 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @use '../standard' as std;
- *   | ^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   src/styles/components/_side-nav.scss 1:1  @use
- *   src/styles/main.scss 6:1                  root stylesheet */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use '../standard' as std;\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   src/styles/components/_side-nav.scss 1:1  @use\a   src/styles/main.scss 6:1                  root stylesheet";
+body {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.layout {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 3;
+  background-color: #16212b;
+}
+
+.side-bar {
+  grid-column: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30vw;
+  margin-left: 10%;
+}
+.side-bar ul {
+  list-style: none;
+  width: 100%;
+}
+.side-bar ul li {
+  cursor: pointer;
+  font-size: 125%;
+  width: fit-content;
+  font-weight: bold;
+  border-radius: 70px;
+  color: white;
+  padding: 15px;
+}
+.side-bar ul li:hover {
+  background-color: #172d3f;
+  color: #1da1f2;
+}
+.side-bar ul li span {
+  margin-left: 10px;
+}
+.side-bar ul .tweet-btn {
+  background-color: #1da1f2;
+  text-align: center;
+  width: 100%;
+}
+.side-bar ul .tweet-btn:hover {
+  background-color: #1da0f2c5;
+  color: #fff;
+}
+.side-bar .user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 70px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px;
+  justify-content: space-between;
+}
+.side-bar .user-info:hover {
+  background-color: #172d3f;
+}
+.side-bar .user-info .info-left {
+  display: flex;
+}
+.side-bar .user-info .info-left .fa-user {
+  margin-right: 10px;
+  background-color: #cdd6dd;
+  padding: 5px;
+  padding-bottom: 0px;
+  overflow: hidden;
+  font-size: 200%;
+  color: #657787;
+  border-radius: 50%;
+}
+.side-bar .user-info .info-left .handle {
+  color: grey;
+}
+.side-bar .user-info .down-btn {
+  font-size: 110%;
+  margin: 8px;
+}
+
+.main-col {
+  grid-column: 2;
+}
+
+.profiles {
+  grid-column: 3;
 }
