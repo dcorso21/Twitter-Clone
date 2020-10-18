@@ -1,3 +1,5 @@
+@use 'libs' as *;
+
 //Base
 @use 'base/reset';
 @use 'base/layout';
@@ -6,8 +8,3 @@
 @use 'components/side-nav';
 @use 'components/main_col';
 @use 'components/profiles';
-
-body{
-    color: white;
-    font-family: Helvetica, Arial, sans-serif
-}

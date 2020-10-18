@@ -1,25 +1,85 @@
-@use '../standard' as std;
+@use '../libs' as *;
 
-
-.side-bar{
+.side-bar {
     grid-column: 1;
+    @include flex-center;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30vw;
+    margin-left: 10%;
 
-    ul{
-        margin-left: 33%;
+    ul {
         list-style: none;
+        width: 100%;
 
-        li{
+        li {
+            cursor: pointer;
             font-size: 125%;
+            width: fit-content;
             font-weight: bold;
+            border-radius: $br-px;
             color: white;
             padding: 15px;
+
+            &:hover {
+                background-color: getColor(hover_bg);
+                color: getColor(hover_fg);
+            }
+
+            span{
+                margin-left: 10px;
+            }
+        }
+
+        .tweet-btn{
+            // align-self: center;
+            background-color: getColor(accent);
+            text-align: center;
+            width: 100%;
+            &:hover{
+                background-color: getColor(hover_acc);
+                color: getColor(fg);
+            }
         }
     }
 
     .user-info {
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        @include std.mx-flex-center;
+        @include flex-center;
+        cursor: pointer;
+        border-radius: $br-px;
+        width: 100%;
+        margin: 20px auto;
+        padding: 10px;
+        justify-content: space-between;
+
+        &:hover {
+            background-color: getColor(hover_bg);
+        }
+
+        .info-left {
+            display: flex;
+
+            // User Icon
+            .fa-user {
+                margin-right: 10px;
+                background-color: #cdd6dd;
+                padding: 5px;
+                padding-bottom: 0px;
+                overflow: hidden;
+                font-size: 200%;
+                color: #657787;
+                border-radius: 50%;
+            }
+
+            // Twitter @handle
+            .handle {
+                color: grey;
+            }
+        }
+        .down-btn {
+            font-size: 110%;
+            margin: 8px;
+        }
     }
 }
