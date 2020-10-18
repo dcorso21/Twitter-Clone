@@ -78,6 +78,7 @@ body {
 }
 
 .side-bar {
+  position: static;
   grid-column: 1;
   display: flex;
   justify-content: center;
@@ -220,6 +221,38 @@ body {
   padding: 10px 15px;
   border-radius: 70px;
   font-weight: bold;
+}
+.main-col .posts .post {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.main-col .posts .post .icon-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-col .posts .post .icon-col .user-icon {
+  width: 50px;
+  border-radius: 50%;
+}
+.main-col .posts .post .icon-col .thread-spacer {
+  margin-top: 10%;
+  height: 90%;
+  border-left: 1px solid #253341;
+}
+.main-col .posts .post .main-msg-col .top-info {
+  display: flex;
+}
+.main-col .posts .post .main-msg-col .top-info .user-name {
+  font-weight: bold;
+}
+.main-col .posts .post .main-msg-col .msg-btns {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
 }
 
 .profiles {
