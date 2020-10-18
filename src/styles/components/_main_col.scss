@@ -63,5 +63,50 @@
         }
     }
 
+    .posts{
+
+        .post{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+
+            .icon-col {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
     
+                .user-icon{
+                    width: 50px;
+                    border-radius: 50%;
+                }
+
+                .thread-spacer {
+                    margin-top: 10%;
+                    height: 90%;
+                    border-left: 1px solid getColor(outline);
+                }
+            }
+
+            .main-msg-col{
+                .top-info{
+                    display: flex;
+
+                    .user-name{
+                        font-weight: bold;
+                    }
+                }
+                .msg-body{
+
+                }
+                .msg-btns{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 80%;
+                    align-items: center;
+
+                }
+            }
+        }
+    }
 }

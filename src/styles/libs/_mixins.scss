@@ -15,3 +15,8 @@
     border-radius: 50%;
     overflow: hidden;
 }
+
+@mixin userName {
+    font-weight: bold;
+    color: getColor(fg);
+}

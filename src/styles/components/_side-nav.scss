@@ -1,6 +1,7 @@
 @use '../libs' as *;
 
 .side-bar {
+    position: static;
     grid-column: 1;
     @include flex-center;
     align-items: flex-start;
