@@ -23,6 +23,10 @@
             color: white;
             padding: 11px 15px;
             margin: 10px 0px;
+            &:nth-of-type(2) {
+                // font-size: 130%;
+                color: getColor(accent);
+            }
 
             &:hover {
                 background-color: getColor(hover_bg);
@@ -74,7 +78,8 @@
 
             // Twitter @handle
             .handle {
-                color: getColor(grey_fg);
+                @include handle;
+                // color: getColor(grey_fg);
             }
         }
         .down-btn {

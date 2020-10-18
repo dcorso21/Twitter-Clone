@@ -6,6 +6,7 @@
     border-right: 1px solid getColor(outline);
 
     .latest-tweets-header {
+        @include main-col-spacing;
         border-bottom: 1px solid getColor(outline);
         padding: 15px;
         font-size: 125%;
@@ -13,8 +14,8 @@
     }
 
     .status {
+        @include main-col-spacing;
         padding: 10px;
-        padding-left: 15px;
         border-bottom: 10px solid getColor(outline);
 
         .type-in {
@@ -63,48 +64,87 @@
         }
     }
 
-    .posts{
+    .posts {
+        // @include main-col-spacing; // DUE TO EACH POST HAVING A
+        // BOTTOM BORDER, spacing has been moved to ind posts
 
-        .post{
-            display: flex;
-            justify-content: start;
-            align-items: center;
+        .post {
+            display: grid;
+            grid-template-columns: 2;
+            // justify-content: start;
+            // align-items: center;
+            padding: 15px 15px 0px 15px;
+            border-bottom: 1px solid getColor(outline);
 
             .icon-col {
+                grid-column: 1;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: space-between;
+                height: 100%;
                 align-items: center;
-    
-                .user-icon{
+                margin-right: 10px;
+
+                .user-icon {
                     width: 50px;
                     border-radius: 50%;
                 }
 
                 .thread-spacer {
                     margin-top: 10%;
-                    height: 90%;
+                    height: 100%;
                     border-left: 1px solid getColor(outline);
                 }
             }
 
-            .main-msg-col{
-                .top-info{
+            .main-msg-col {
+                grid-column: 2;
+                display: flex;
+                height: 100%;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .top-info {
                     display: flex;
 
-                    .user-name{
+                    .user-name {
                         font-weight: bold;
+                        @include userName;
+                    }
+
+                    .handle,
+                    .time {
+                        @include handle;
+                        font-size: 95%;
                     }
                 }
-                .msg-body{
-
+                .msg-body {
+                    line-height: 110%;
+                    margin: 5px 0 0 0;
                 }
-                .msg-btns{
+                .msg-btns {
                     display: flex;
                     justify-content: space-between;
                     width: 80%;
                     align-items: center;
 
+                    i {
+                        padding: 10px;
+                        border-radius: 50%;
+                        color: getColor(grey_fg);
+                        &:hover {
+                            background-color: getColor(hover_bg);
+                            color: getColor(accent);
+                        }
+                        &:nth-of-type(2):hover {
+                            background-color: rgba(34, 70, 34, 0.301);
+                            color: rgb(57, 214, 57);
+                        }
+                        &:nth-of-type(3):hover {
+                            background-color: rgba(70, 34, 34, 0.301);
+                            color: rgb(214, 57, 57);
+                        }
+                    }
                 }
             }
         }
