@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 30vw;
-    margin-left: 10%;
+    margin-left: 25%;
 
     ul {
         list-style: none;
@@ -27,17 +27,21 @@
                 color: getColor(hover_fg);
             }
 
-            span{
+            i{
+                font-size: 110%;
+            }
+
+            span {
                 margin-left: 10px;
             }
         }
 
-        .tweet-btn{
+        .tweet-btn {
             // align-self: center;
             background-color: getColor(accent);
             text-align: center;
-            width: 100%;
-            &:hover{
+            // width: 100%;
+            &:hover {
                 background-color: getColor(hover_acc);
                 color: getColor(fg);
             }
@@ -48,7 +52,7 @@
         @include flex-center;
         cursor: pointer;
         border-radius: $br-px;
-        width: 100%;
+        // width: 100%;
         margin: 20px auto;
         padding: 10px;
         justify-content: space-between;
@@ -62,14 +66,8 @@
 
             // User Icon
             .fa-user {
-                margin-right: 10px;
-                background-color: #cdd6dd;
-                padding: 5px;
-                padding-bottom: 0px;
-                overflow: hidden;
+                @include user-icon;
                 font-size: 200%;
-                color: #657787;
-                border-radius: 50%;
             }
 
             // Twitter @handle

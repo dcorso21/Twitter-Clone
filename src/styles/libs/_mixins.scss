@@ -1,7 +1,17 @@
-@use 'functions';
+@use 'functions' as *;
 
 @mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin user-icon {
+    margin-right: 10px;
+    color: getColor(user_fg);
+    background-color: getColor(user_bg);
+    padding: 5px;
+    padding-bottom: 0px;
+    border-radius: 50%;
+    overflow: hidden;
 }

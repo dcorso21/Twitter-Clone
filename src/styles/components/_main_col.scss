@@ -1,3 +1,64 @@
+@use '../libs' as *;
+
 .main-col {
     grid-column: 2;
+    border-left: 1px solid getColor(outline);
+    border-right: 1px solid getColor(outline);
+
+    .latest-tweets-header {
+        border-bottom: 1px solid getColor(outline);
+        padding: 15px;
+        font-size: 110%;
+    }
+
+    .status {
+        padding: 10px;
+        padding-left: 15px;
+        border-bottom: 10px solid getColor(outline);
+
+        .type-in {
+            display: flex;
+            padding-bottom: 10px;
+            .fa-user {
+                @include user-icon;
+                font-size: 270%;
+            }
+
+            input {
+                outline: none;
+                border: none;
+                color: getColor(fg);
+                background-color: getColor(bg);
+                font-size: 1.2rem;
+
+                &::placeholder {
+                    color: getColor(input_placeholder);
+                }
+            }
+        }
+
+        .lower-btns {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .icons {
+                font-size: 130%;
+                color: getColor(accent);
+                @include flex-center;
+                margin-left: 50px;
+                i {
+                    margin-left: 17px;
+                }
+            }
+
+            .send-tweet {
+                background-color: getColor(grey_acc);
+                color: getColor(grey_fg);
+                padding: 10px 15px;
+                border-radius: $br-px;
+                font-weight: bold;
+            }
+        }
+    }
 }
