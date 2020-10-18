@@ -96,24 +96,28 @@ body {
   cursor: pointer;
   font-size: 125%;
   width: fit-content;
-  font-weight: bold;
+  font-weight: 600;
   border-radius: 70px;
   color: white;
-  padding: 15px;
+  padding: 11px 15px;
+  margin: 10px 0px;
 }
 .side-bar ul li:hover {
   background-color: #172d3f;
   color: #1da1f2;
 }
 .side-bar ul li i {
-  font-size: 110%;
+  font-size: 125%;
 }
 .side-bar ul li span {
   margin-left: 10px;
 }
 .side-bar ul .tweet-btn {
+  font-size: 90%;
   background-color: #1da1f2;
   text-align: center;
+  padding: 18px 15px;
+  width: 45%;
 }
 .side-bar ul .tweet-btn:hover {
   background-color: #1da0f2c5;
@@ -125,7 +129,8 @@ body {
   align-items: center;
   cursor: pointer;
   border-radius: 70px;
-  margin: 20px auto;
+  width: 50%;
+  margin: 20px 0px;
   padding: 10px;
   justify-content: space-between;
 }
@@ -146,7 +151,7 @@ body {
   font-size: 200%;
 }
 .side-bar .user-info .info-left .handle {
-  color: grey;
+  color: #8899a6;
 }
 .side-bar .user-info .down-btn {
   font-size: 110%;
@@ -161,7 +166,8 @@ body {
 .main-col .latest-tweets-header {
   border-bottom: 1px solid #253341;
   padding: 15px;
-  font-size: 110%;
+  font-size: 125%;
+  font-weight: 800;
 }
 .main-col .status {
   padding: 10px;
@@ -210,7 +216,7 @@ body {
 }
 .main-col .status .lower-btns .send-tweet {
   background-color: #1da0f273;
-  color: #ffffff6e;
+  color: #8899a6;
   padding: 10px 15px;
   border-radius: 70px;
   font-weight: bold;
@@ -220,14 +226,14 @@ body {
   grid-column: 3;
   display: flex;
   flex-direction: column;
-  margin: 10px 20% 5% 10%;
+  margin: 10px 20% 5% 7%;
 }
 .profiles .searchBar {
   background-color: #253341;
   border-radius: 70px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0);
-  transition: all 0.3s;
+  transition: all 0.1s;
 }
 .profiles .searchBar:focus-within {
   border: 1px solid #1da1f2;
@@ -251,4 +257,99 @@ body {
 }
 .profiles .searchBar input::placeholder {
   color: #8899a6;
+}
+.profiles .card {
+  display: flex;
+  flex-direction: column;
+  background-color: #192734;
+  margin: 15px 0px;
+  border-radius: 17.5px;
+}
+.profiles .card .heading {
+  font-size: 120%;
+  font-weight: bold;
+  padding: 15px;
+  border-bottom: 1px solid #253341;
+}
+.profiles .card .show-more-btn {
+  padding: 15px;
+  font-size: 95%;
+  color: #1da1f2;
+  cursor: pointer;
+  overflow: hidden;
+}
+.profiles .card .show-more-btn:hover {
+  background-color: #1f2d38;
+  overflow: hidden;
+  border-bottom-left-radius: 17.5px;
+  border-bottom-right-radius: 17.5px;
+}
+.profiles .card li {
+  padding: 15px;
+  border-bottom: 1px solid #253341;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.profiles .card li:hover {
+  background-color: #1f2d38;
+}
+.profiles .card.whats-happening .info {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.profiles .card.whats-happening .info .topics {
+  display: flex;
+  color: #8899a6;
+  font-size: 85%;
+}
+.profiles .card.whats-happening .info .trend-name {
+  font-weight: bold;
+  padding: 10px 0;
+  line-height: 110%;
+}
+.profiles .card.whats-happening .info .num-tweet {
+  font-size: 85%;
+  color: #8899a6;
+}
+.profiles .card.whats-happening .down-btn {
+  color: #8899a6;
+}
+.profiles .card.who-to-follow .prof-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.profiles .card.who-to-follow .prof-info:hover {
+  background-color: #1f2d38;
+}
+.profiles .card.who-to-follow .prof-info .info-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profiles .card.who-to-follow .prof-info .info-left img {
+  border-radius: 50%;
+  width: 50px;
+  margin-right: 10px;
+}
+.profiles .card.who-to-follow .prof-info .info-left .user-name {
+  font-weight: bold;
+}
+.profiles .card.who-to-follow .prof-info .info-left .handle {
+  color: #8899a6;
+  font-size: 93%;
+}
+.profiles .card.who-to-follow .prof-info .follow-btn {
+  color: #1da1f2;
+  border-radius: 70px;
+  font-weight: bold;
+  font-size: 95%;
+  border: 1px solid #1da1f2;
+  padding: 7px 15px;
+  float: right;
 }

@@ -4,14 +4,14 @@
     grid-column: 3;
     display: flex;
     flex-direction: column;
-    margin: 10px 20% 5% 10%;
+    margin: 10px 20% 5% 7%;
 
     .searchBar {
         background-color: getColor(outline);
         border-radius: $br-px;
         overflow: hidden;
         border: 1px solid getColor(transp);
-        transition: all 0.3s;
+        transition: all 0.1s;
 
         &:focus-within {
             border: 1px solid getColor(accent);
@@ -40,7 +40,120 @@
         }
     }
 
-    .whats-happening {
-        
+    .card {
+        display: flex;
+        flex-direction: column;
+        background-color: getColor(card_bg);
+        margin: 15px 0px;
+        border-radius: $wh-br;
+
+        .heading {
+            font-size: 120%;
+            font-weight: bold;
+            padding: 15px;
+            border-bottom: 1px solid getColor(outline);
+        }
+
+        .show-more-btn {
+            padding: 15px;
+            font-size: 95%;
+            color: getColor(accent);
+            cursor: pointer;
+            overflow: hidden;
+            &:hover {
+                background-color: getColor(card_bg_hover);
+                overflow: hidden;
+                border-bottom-left-radius: $wh-br;
+                border-bottom-right-radius: $wh-br;
+            }
+        }
+
+        li {
+            padding: 15px;
+            border-bottom: 1px solid getColor(outline);
+            display: flex;
+            justify-content: space-between;
+            transition: all 0.2s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: getColor(card_bg_hover);
+            }
+        }
+
+        &.whats-happening {
+            .info {
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+
+                .topics {
+                    display: flex;
+                    color: getColor(grey_fg);
+                    font-size: 85%;
+                }
+
+                .trend-name {
+                    font-weight: bold;
+                    padding: 10px 0;
+                    line-height: 110%;
+                }
+
+                .num-tweet {
+                    font-size: 85%;
+                    color: getColor(grey_fg);
+                }
+            }
+
+            .down-btn {
+                color: getColor(grey_fg);
+            }
+        }
+
+        &.who-to-follow {
+            .prof-info {
+                // @include flex-center;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: getColor(card_bg_hover);
+                }
+
+                .info-left {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        border-radius: 50%;
+                        width: 50px;
+                        margin-right: 10px;
+                    }
+
+                    .user-name {
+                        font-weight: bold;
+                    }
+
+                    .handle {
+                        color: getColor(grey_fg);
+                        font-size: 93%;
+                    }
+                }
+
+                .follow-btn{
+                    color: getColor(accent);
+                    border-radius: $br-px;
+                    font-weight: bold;
+                    font-size: 95%;
+                    border: 1px solid getColor(accent);
+                    padding: 7px 15px;
+                    float: right;
+                }
+            }
+        }
     }
 }

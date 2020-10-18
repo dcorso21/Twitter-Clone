@@ -17,30 +17,31 @@
             cursor: pointer;
             font-size: 125%;
             width: fit-content;
-            font-weight: bold;
+            font-weight: 600;
             border-radius: $br-px;
             color: white;
-            padding: 15px;
+            padding: 11px 15px;
+            margin: 10px 0px;
 
             &:hover {
                 background-color: getColor(hover_bg);
                 color: getColor(hover_fg);
             }
 
-            i{
-                font-size: 110%;
+            i {
+                font-size: 125%;
             }
 
             span {
                 margin-left: 10px;
             }
         }
-
         .tweet-btn {
-            // align-self: center;
+            font-size: 90%;
             background-color: getColor(accent);
             text-align: center;
-            // width: 100%;
+            padding: 18px 15px;
+            width: 45%;
             &:hover {
                 background-color: getColor(hover_acc);
                 color: getColor(fg);
@@ -52,8 +53,8 @@
         @include flex-center;
         cursor: pointer;
         border-radius: $br-px;
-        // width: 100%;
-        margin: 20px auto;
+        width: 50%;
+        margin: 20px 0px;
         padding: 10px;
         justify-content: space-between;
 
@@ -72,7 +73,7 @@
 
             // Twitter @handle
             .handle {
-                color: grey;
+                color: getColor(grey_fg);
             }
         }
         .down-btn {

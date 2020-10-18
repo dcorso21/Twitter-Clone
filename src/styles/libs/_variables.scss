@@ -1,4 +1,5 @@
 $br-px: 70px;
+$wh-br: $br-px / 4;
 
 $color_palette: (
     // Basic
@@ -17,9 +18,10 @@ $color_palette: (
     user_fg: #657787,
     //Forms
     input_placeholder: #8899a6,
-    
     //Greyed Out
     grey_acc: #1da0f273,
-    grey_fg: #ffffff6e,
-
+    grey_fg: #8899a6,
+    //Profile
+    card_bg: #192734,
+    card_bg_hover: #1f2d38,
 );
