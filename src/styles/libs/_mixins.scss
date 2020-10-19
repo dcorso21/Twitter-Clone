@@ -20,16 +20,23 @@
     font-weight: bold;
     color: getColor(fg);
     border-bottom: 1px solid getColor(transp);
-    transition: all .3s;
-    &:hover{
+    transition: all 0.3s;
+    &:hover {
         border-bottom: 1px solid getColor(fg);
     }
 }
 
 @mixin handle {
-    color: getColor(grey_fg)
+    color: getColor(grey_fg);
 }
 
 @mixin main-col-spacing {
     padding: 0 15px;
+}
+
+@mixin independant-scroll {
+    overflow: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }

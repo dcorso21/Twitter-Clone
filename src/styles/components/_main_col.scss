@@ -1,14 +1,18 @@
 @use '../libs' as *;
 
 .main-col {
+    @include independant-scroll;
     grid-column: 2;
     border-left: 1px solid getColor(outline);
     border-right: 1px solid getColor(outline);
 
     .latest-tweets-header {
         @include main-col-spacing;
+        position: sticky;
+        top: 0;
+        background-color: getColor(bg);
         border-bottom: 1px solid getColor(outline);
-        padding: 15px;
+        padding: 18px 15px;
         font-size: 125%;
         font-weight: 800;
     }
@@ -65,16 +69,15 @@
     }
 
     .posts {
-        // @include main-col-spacing; // DUE TO EACH POST HAVING A
-        // BOTTOM BORDER, spacing has been moved to ind posts
 
         .post {
             display: grid;
             grid-template-columns: 2;
-            // justify-content: start;
-            // align-items: center;
             padding: 15px 15px 0px 15px;
             border-bottom: 1px solid getColor(outline);
+            &:hover {
+                background-color: getColor(card_bg);
+            }
 
             .icon-col {
                 grid-column: 1;
@@ -93,7 +96,7 @@
                 .thread-spacer {
                     margin-top: 10%;
                     height: 100%;
-                    border-left: 1px solid getColor(outline);
+                    border-left: 1px solid getColor(transp);
                 }
             }
 
@@ -122,6 +125,19 @@
                     line-height: 110%;
                     margin: 5px 0 0 0;
                 }
+                
+                .msg-img {
+                    margin-top: 13px;
+                    img {
+                        border: 1px solid getColor(outline);
+                        border-radius: $wh-br;
+                        max-width: 100%;
+                        max-height: 100%;
+                        object-fit: cover;
+                        overflow: hidden;
+                    }
+                }
+
                 .msg-btns {
                     display: flex;
                     justify-content: space-between;

@@ -1,41 +1,59 @@
 @use '../libs' as *;
 
 .profiles {
+    @include independant-scroll;
     grid-column: 3;
     display: flex;
     flex-direction: column;
-    margin: 10px 20% 5% 7%;
+    margin: 0 20% 5% 7%;
 
-    .searchBar {
-        background-color: getColor(outline);
-        border-radius: $br-px;
-        overflow: hidden;
-        border: 1px solid getColor(transp);
-        transition: all 0.1s;
+    .searchWrapper {
+        background-color: inherit;
+        position: sticky;
+        top: 0;
+        padding: 7px 0;
+        background-color: getColor(bg);
+        z-index: 10;
 
-        &:focus-within {
-            border: 1px solid getColor(accent);
-            background-color: getColor(bg);
-            .fa-search {
-                color: getColor(accent);
+        .searchBar {
+            background-color: getColor(outline);
+            border-radius: $br-px;
+            height: 80%;
+            // line-height: 100%;
+            // padding-bottom: 15px;
+            border: 1px solid getColor(transp);
+            transition: all 0.1s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            &:focus-within {
+                border: 1px solid getColor(accent);
+                background-color: getColor(bg);
+                .fa-search {
+                    color: getColor(accent);
+                }
             }
-        }
 
-        .fa-search {
-            margin-left: 15px;
-            color: getColor(input_placeholder);
-        }
-
-        input {
-            border: none;
-            padding: 10px 0 10px 20px;
-            width: 80%;
-            color: getColor(fg);
-            background-color: inherit;
-            font-size: 105%;
-            outline: none;
-            &::placeholder {
+            .fa-search {
+                margin-left: 15px;
                 color: getColor(input_placeholder);
+            }
+
+            input {
+                font-weight: 100;
+                border: none;
+                padding: 10px 0 10px 20px;
+                width: 80%;
+                // height: 90%;
+                color: getColor(fg);
+                background-color: transparent;
+                font-size: 105%;
+                outline: none;
+                &::placeholder {
+                    color: getColor(input_placeholder);
+                }
             }
         }
     }
@@ -44,7 +62,8 @@
         display: flex;
         flex-direction: column;
         background-color: getColor(card_bg);
-        margin: 15px 0px;
+        margin-top: 15px;
+        margin-bottom: 15px;
         border-radius: $wh-br;
 
         .heading {
@@ -144,7 +163,7 @@
                     }
                 }
 
-                .follow-btn{
+                .follow-btn {
                     color: getColor(accent);
                     border-radius: $br-px;
                     font-weight: bold;

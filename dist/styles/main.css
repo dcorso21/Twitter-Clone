@@ -163,14 +163,21 @@ body {
 }
 
 .main-col {
+  overflow: scroll;
   grid-column: 2;
   border-left: 1px solid #253341;
   border-right: 1px solid #253341;
 }
+.main-col::-webkit-scrollbar {
+  display: none;
+}
 .main-col .latest-tweets-header {
   padding: 0 15px;
+  position: sticky;
+  top: 0;
+  background-color: #16212b;
   border-bottom: 1px solid #253341;
-  padding: 15px;
+  padding: 18px 15px;
   font-size: 125%;
   font-weight: 800;
 }
@@ -232,6 +239,9 @@ body {
   padding: 15px 15px 0px 15px;
   border-bottom: 1px solid #253341;
 }
+.main-col .posts .post:hover {
+  background-color: #192734;
+}
 .main-col .posts .post .icon-col {
   grid-column: 1;
   display: flex;
@@ -248,7 +258,7 @@ body {
 .main-col .posts .post .icon-col .thread-spacer {
   margin-top: 10%;
   height: 100%;
-  border-left: 1px solid #253341;
+  border-left: 1px solid rgba(255, 255, 255, 0);
 }
 .main-col .posts .post .main-msg-col {
   grid-column: 2;
@@ -279,6 +289,17 @@ body {
   line-height: 110%;
   margin: 5px 0 0 0;
 }
+.main-col .posts .post .main-msg-col .msg-img {
+  margin-top: 13px;
+}
+.main-col .posts .post .main-msg-col .msg-img img {
+  border: 1px solid #253341;
+  border-radius: 17.5px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
 .main-col .posts .post .main-msg-col .msg-btns {
   display: flex;
   justify-content: space-between;
@@ -304,46 +325,63 @@ body {
 }
 
 .profiles {
+  overflow: scroll;
   grid-column: 3;
   display: flex;
   flex-direction: column;
-  margin: 10px 20% 5% 7%;
+  margin: 0 20% 5% 7%;
 }
-.profiles .searchBar {
+.profiles::-webkit-scrollbar {
+  display: none;
+}
+.profiles .searchWrapper {
+  background-color: inherit;
+  position: sticky;
+  top: 0;
+  padding: 7px 0;
+  background-color: #16212b;
+  z-index: 10;
+}
+.profiles .searchWrapper .searchBar {
   background-color: #253341;
   border-radius: 70px;
-  overflow: hidden;
+  height: 80%;
   border: 1px solid rgba(255, 255, 255, 0);
   transition: all 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.profiles .searchBar:focus-within {
+.profiles .searchWrapper .searchBar:focus-within {
   border: 1px solid #1da1f2;
   background-color: #16212b;
 }
-.profiles .searchBar:focus-within .fa-search {
+.profiles .searchWrapper .searchBar:focus-within .fa-search {
   color: #1da1f2;
 }
-.profiles .searchBar .fa-search {
+.profiles .searchWrapper .searchBar .fa-search {
   margin-left: 15px;
   color: #8899a6;
 }
-.profiles .searchBar input {
+.profiles .searchWrapper .searchBar input {
+  font-weight: 100;
   border: none;
   padding: 10px 0 10px 20px;
   width: 80%;
   color: #fff;
-  background-color: inherit;
+  background-color: transparent;
   font-size: 105%;
   outline: none;
 }
-.profiles .searchBar input::placeholder {
+.profiles .searchWrapper .searchBar input::placeholder {
   color: #8899a6;
 }
 .profiles .card {
   display: flex;
   flex-direction: column;
   background-color: #192734;
-  margin: 15px 0px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   border-radius: 17.5px;
 }
 .profiles .card .heading {
@@ -360,7 +398,7 @@ body {
   overflow: hidden;
 }
 .profiles .card .show-more-btn:hover {
-  background-color: #1f2d38;
+  background-color: #18232e;
   overflow: hidden;
   border-bottom-left-radius: 17.5px;
   border-bottom-right-radius: 17.5px;
@@ -374,7 +412,7 @@ body {
   cursor: pointer;
 }
 .profiles .card li:hover {
-  background-color: #1f2d38;
+  background-color: #18232e;
 }
 .profiles .card.whats-happening .info {
   display: flex;
@@ -406,7 +444,7 @@ body {
   cursor: pointer;
 }
 .profiles .card.who-to-follow .prof-info:hover {
-  background-color: #1f2d38;
+  background-color: #18232e;
 }
 .profiles .card.who-to-follow .prof-info .info-left {
   display: flex;
