@@ -175,4 +175,15 @@
             }
         }
     }
+
+    .page-info {
+        color: getColor(grey_fg);
+        width: 90%;
+        margin: auto;
+        line-height: 130%;
+
+        a{
+            color: getColor(accent);
+        }
+    }
 }

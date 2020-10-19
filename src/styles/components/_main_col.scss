@@ -72,7 +72,7 @@
 
         .post {
             display: grid;
-            grid-template-columns: 2;
+            grid-template-columns: min-content, 1fr;
             padding: 15px 15px 0px 15px;
             border-bottom: 1px solid getColor(outline);
             &:hover {
@@ -85,6 +85,7 @@
                 flex-direction: column;
                 justify-content: space-between;
                 height: 100%;
+                width: min-content;
                 align-items: center;
                 margin-right: 10px;
 
@@ -124,6 +125,7 @@
                 .msg-body {
                     line-height: 110%;
                     margin: 5px 0 0 0;
+                    width: 100%;
                 }
                 
                 .msg-img {
